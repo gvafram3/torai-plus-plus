@@ -1,0 +1,16 @@
+{
+  "0": [
+    "frontend_A",
+    "currencyservice_A",
+    "recommendationservice_A",
+    "checkoutservice_A",
+    "adservice_A",
+    "productcatalogservice_A",
+    "redis_A",
+    "cartservice_A",
+    "emailservice_A",
+    "paymentservice_A",
+    "shippingservice_A",
+    "frontend-external_A"
+  ]
+}

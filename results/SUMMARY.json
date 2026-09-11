@@ -1,0 +1,41 @@
+{
+  "title": "TORAI++ : a post-processing fix for TORAI's aggregation-blindness",
+  "dataset": "RE3 (Zenodo) \u2014 60 usable cases (30 RE3-OB + 30 RE3-TT)",
+  "best_config": {
+    "penalty": 3.0,
+    "thresh": 0.0,
+    "min_anom": 1
+  },
+  "torai_baseline": {
+    "RE3-OB": {
+      "n": 30,
+      "AC@1": 0.03333333333333333
+    },
+    "RE3-TT": {
+      "n": 30,
+      "AC@1": 1.0
+    },
+    "Overall": {
+      "n": 60,
+      "AC@1": 0.52,
+      "AC@3": 0.98,
+      "AC@5": 0.98
+    }
+  },
+  "torai_plus_plus": {
+    "RE3-OB": {
+      "n": 30,
+      "AC@1": 0.9666666666666667,
+      "AC@3": 0.9666666666666667,
+      "AC@5": 0.9666666666666667
+    },
+    "RE3-TT": {
+      "n": 30,
+      "AC@1": 1.0,
+      "AC@3": 1.0,
+      "AC@5": 1.0
+    }
+  },
+  "mechanism": "TORAI ranks services by anomaly severity. In systems with aggregation points (Online Boutique frontend/checkoutservice), a code-level fault in a leaf service produces its loudest anomalies in the aggregator, which is a victim, not a cause. TORAI++ re-ranks using the call graph: services with many anomalous callees are penalized (treated as victims).",
+  "sanity_check": "TORAI on the authors own torai-OB dataset reproduces the paper exactly: CPU 0.96, MEM 0.93, DISK 1.0, SOCKET 0.92, DELAY 0.80, LOSS 0.87."
+}
