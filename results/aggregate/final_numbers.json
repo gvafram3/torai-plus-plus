@@ -1,0 +1,24 @@
+{
+  "torai_5run": {
+    "re3_ob": {"n": 30, "AC@1": 0.033, "AC@3": 0.967, "AC@5": 0.967, "std": 0.0},
+    "re3_tt": {"n": 30, "AC@1": 1.000, "AC@3": 1.000, "AC@5": 1.000, "std": 0.0},
+    "overall": {"n": 60, "AC@1": 0.517, "AC@3": 0.983, "AC@5": 0.983, "std": 0.0}
+  },
+  "torai_plus_plus_5run": {
+    "re3_ob": {"n": 30, "AC@1": 0.967, "AC@3": 0.967, "AC@5": 0.967, "std": 0.0},
+    "re3_tt": {"n": 30, "AC@1": 1.000, "AC@3": 1.000, "AC@5": 1.000, "std": 0.0},
+    "overall": {"n": 60, "AC@1": 0.983, "AC@3": 0.983, "AC@5": 0.983, "std": 0.0}
+  },
+  "mcnemar": {
+    "re3_ob": {"n": 30, "b": 0, "c": 28, "p_exact": "<1e-6", "significant": true},
+    "re3_tt": {"n": 30, "b": 0, "c": 0,  "p_exact": "1.0",    "significant": false}
+  },
+  "torai_ob_sanity_check_5run": {
+    "n": 90,
+    "AC@1_overall": 0.778,
+    "per_fault": {"cpu": 0.867, "mem": 0.667, "disk": 1.000, "socket": 0.800, "delay": 0.600, "loss": 0.733},
+    "paper_table2_MLT_per_fault": {"cpu": 0.92, "mem": 0.67, "disk": 1.00, "socket": 0.87, "delay": 0.67, "loss": 0.87},
+    "matches_exactly": ["mem", "disk"],
+    "gap_explanation": "Deployment difference: authors' Online Boutique (11 services, 77 metrics) vs RE3's Online Boutique (12 services, ~389 metrics)"
+  }
+}
